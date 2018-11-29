@@ -1,0 +1,28 @@
+package service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import mapper.DataDictionaryMapper;
+import pojo.DataDictionary;
+import service.DataDictionaryService;
+
+
+
+@Service
+public class DataDictionaryServiceImpl implements DataDictionaryService {
+	
+	@Resource
+	private DataDictionaryMapper mapper;
+	
+
+	public List<DataDictionary> getDataDictionaryList(String typeCode)
+			throws Exception {
+		// TODO Auto-generated method stub
+		return mapper.getDataDictionaryList(typeCode);
+	}
+
+}
